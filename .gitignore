@@ -1,0 +1,44 @@
+# Build directories
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+build/
+
+# CLion / IntelliJ files
+.idea/
+*.iml
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Executables / binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+
+# Debug / logs
+*.log
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.swp
+*.swo
+*~
