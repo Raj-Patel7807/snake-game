@@ -6,7 +6,8 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
 
-add_executable(SnakeGame ${SOURCES})
+add_executable(SnakeGame ${SOURCES}
+        src/powerups/PowerUp.cpp)
 
 target_include_directories(SnakeGame PRIVATE src)
 

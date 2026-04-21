@@ -1,0 +1,1 @@
+$p = Get-Process -Name SnakeGame -ErrorAction SilentlyContinue; if ($p) { $p | Stop-Process -Force }; $srcs = Get-ChildItem -Recurse -Path src -Filter *.cpp | ForEach-Object { $_.FullName }; g++ -std=c++20 -O2 -Isrc @srcs -o SnakeGame.exe
