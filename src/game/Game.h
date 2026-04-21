@@ -1,9 +1,9 @@
 #pragma once
-#include <vector>
+
+#include <string>
 
 #include "../utils/Direction.h"
-
-using namespace std;
+#include "../config/GameSettings.h"
 
 class Game {
 protected:
@@ -11,15 +11,13 @@ protected:
     int height;
     int score;
     bool isGameOver;
-    Direction Dir;
+    Direction direction;
 
 public:
     Game();
 
-    void run();
+    void run(const std::string &playerName, int initialDelayMs, bool wallsEnabled, GameMode mode, int &maxScore);
 
 protected:
-    void draw();
-    void input();
-    void logic();
+    void resetSession();
 };
