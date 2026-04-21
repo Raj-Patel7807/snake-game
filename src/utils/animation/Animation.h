@@ -1,5 +1,4 @@
 #pragma once
 #include <string>
-using namespace std;
 
-void animation(string name);
+void animation(std::string name);

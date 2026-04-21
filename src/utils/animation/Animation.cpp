@@ -1,20 +1,24 @@
 #include "Animation.h"
 #include <iostream>
 #include "../../config/Config.h"
+#include "../color/Color.h"
 
-void animation(string name) {
+using std::cout;
+using std::flush;
+
+void animation(std::string name) {
     system(CLEAR);
 
-    cout << "\n\n\n";
+    cout << Color::brightCyan() << "\n\n\n";
     cout << "          *************************************************************************\n\n";
     cout << "                                      S N A K E  G A M E\n\n";
-    cout << "                                      Get Ready, " << name << "..!!\n\n";
-    cout << "          *************************************************************************\n\n\n\n\n\n\n";
+    cout << Color::brightYellow() << "                                      Get Ready, " << name << "..!!\n\n" << Color::brightCyan();
+    cout << "          *************************************************************************\n\n\n\n\n\n\n" << Color::reset();
 
-    cout << "                                    L O A D I N G ";
+    cout << Color::brightBlue() << "                                    L O A D I N G " << Color::reset();
     
     for (int i = 0; i < 5; i++) {
-        cout << "." << flush;
+        cout << Color::brightBlue() << "." << Color::reset() << flush;
 
         #if defined(_WIN32) || defined(_WIN64)
             Sleep(700);
@@ -26,46 +30,46 @@ void animation(string name) {
     for (int i = 3; i >= 0; i--) {
         system(CLEAR);
 
-        cout << "\n\n\n\n\n";
-        cout << "\r                                    Starting in:\n\n\n";
+        cout << Color::brightCyan() << "\n\n\n\n\n";
+        cout << "\r                                    Starting in:\n\n\n" << Color::reset();
 
         if(i == 3) {
-            cout << R"(
+            cout << Color::brightYellow() << R"(
                                          ____
-                                        |___ \ 
+                                        |___ \
                                           __) |  
                                          |__ <    
                                          ___) |    
                                         |____/     
-            )" << flush;
+            )" << Color::reset() << flush;
         } else if(i == 2) {
-            cout << R"(
+            cout << Color::brightYellow() << R"(
                                         ______
                                        / ____ \
                                        \/   / /
                                            / / 
                                           / /___
                                          /______| 
-            )" << flush;
+            )" << Color::reset() << flush;
         } else if(i == 1) {
-            cout << R"(
+            cout << Color::brightYellow() << R"(
                                           _ 
                                          / |
                                          | |
                                          | |
                                          | |
                                          |_|
-            )" << flush;
+            )" << Color::reset() << flush;
         } else {
             system(CLEAR);
-            cout << "\n\n\n\n\n\n" R"(
+            cout << Color::brightGreen() << "\n\n\n\n\n\n" R"(
                           _____   _______      __      _____     _______ 
                          / ____| |_______|    /  \     |  __ \  |_______|
                         | (___      | |      / _  \    | |__) |    | |
                          \___ \     | |     / / \  \   |  _  /     | |
                          ____) |    | |    /  ____  \  | | \ \     | |
                         |_____/     |_|   /__/    \__\ |_|  \_\    |_|
-            )" << flush;
+            )" << Color::reset() << flush;
         }
 
         #if defined(_WIN32) || defined(_WIN64)
