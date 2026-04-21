@@ -1,9 +1,9 @@
-
 # 🐍 Snake Game
 
 ---
 
 ## 📌 Table of Contents
+
 - [📖 Introduction](#-introduction)
 - [✨ Features](#-features)
 - [🎮 How to Play](#-how-to-play)
@@ -17,11 +17,15 @@
 ---
 
 ## 📖 Introduction
-This project is a console-based Snake Game implemented in C++. It follows an object-oriented approach using classes and inheritance to manage game components like the snake, fruit, and game board.**Our code is for Windows and Linux. It will work in both OS.**
+
+This project is a console-based Snake Game implemented in C++. It follows an object-oriented approach using classes and
+inheritance to manage game components like the snake, fruit, and game board.**Our code is for Windows and Linux. It will
+work in both OS.**
 
 ---
 
 ## ✨ Features
+
 - 🎯 Grid-based gameplay.
 - 🎮 Snake movement using keyboard controls.
 - 🍏 Normal and special fruits for scoring.
@@ -33,6 +37,7 @@ This project is a console-based Snake Game implemented in C++. It follows an obj
 ---
 
 ## 🎮 How to Play
+
 - Control the snake using `W, A, S, D` or arrow keys.
 - 🍏 Eat fruits (`@` for normal, `$` for special) to grow and score points.
 - 🚧 Avoid walls and obstacles (`#`).
@@ -42,44 +47,50 @@ This project is a console-based Snake Game implemented in C++. It follows an obj
 ---
 
 ## 🎯 Game Controls
-| 🎮 Key | 🏹 Action |
-|--------|-----------|
-| `W / ⬆️` | Move Up |
-| `S / ⬇️` | Move Down |
-| `A / ⬅️` | Move Left |
+
+| 🎮 Key   | 🏹 Action  |
+|----------|------------|
+| `W / ⬆️` | Move Up    |
+| `S / ⬇️` | Move Down  |
+| `A / ⬅️` | Move Left  |
 | `D / ➡️` | Move Right |
-| `P` | Pause |
-| `R` | Resume |
-| `X` | Reset Game |
-| `ESC` | Exit Game |
+| `P`      | Pause      |
+| `R`      | Resume     |
+| `X`      | Reset Game |
+| `ESC`    | Exit Game  |
 
 ---
 
-## 🚀 Installation Guide  
+## 🚀 Installation Guide
 
-Follow these steps to install and run the **Snake Game** on your machine:  
-i will tell you later..😁
+Follow these steps to install and run the **Snake Game** on your machine:
 
-[//]: # (### 1️⃣ Clone the Repository 🖥️  )
+### 1️⃣ Clone the Repository 🖥️
 
-[//]: # (- Ensure you have **Git** installed, then run:  )
+- Ensure you have **Git** installed, then run:
 
-[//]: # (```bash)
+```bash
 
-[//]: # (git clone https://github.com/Raj-Patel7807/snake-game.git)
+git clone https://github.com/Raj-Patel7807/snake-game.git
 
-[//]: # (```  )
+```  
+
+### 2️⃣ Navigate to the Project Directory 📂
+
+```bash
+
+cd snake-game
+
+```  
+
+### Run the .exe file in your terminal and Play the Game..🥳
+
+```bash
+./SnakeGame.exe
+```
 
 [//]: # ()
-[//]: # (### 2️⃣ Navigate to the Project Directory 📂  )
 
-[//]: # (```bash)
-
-[//]: # (cd snake-game)
-
-[//]: # (```  )
-
-[//]: # ()
 [//]: # (### 3️⃣ Compile the Source Code ⚙️)
 
 [//]: # (- Make sure you have **g++** &#40;GCC compiler&#41; installed, then compile the code:  )
@@ -91,9 +102,11 @@ i will tell you later..😁
 [//]: # (```  )
 
 [//]: # ()
+
 [//]: # (### 4️⃣ Run & Play the Game 🎮  )
 
 [//]: # ()
+
 [//]: # (- **For Linux Users 🐧:**  )
 
 [//]: # (```bash)
@@ -111,6 +124,7 @@ i will tell you later..😁
 [//]: # (```  )
 
 [//]: # ()
+
 [//]: # (### 5️⃣ &#40;Optional&#41; Clone with SSH 🔑  )
 
 [//]: # (- If you prefer SSH over HTTPS:  )
@@ -122,6 +136,7 @@ i will tell you later..😁
 [//]: # (```  )
 
 [//]: # ()
+
 [//]: # (### 6️⃣ &#40;Optional&#41; Pull Latest Updates 🔄  )
 
 [//]: # (- If you have already cloned the repo and want to get the latest updates:  )
@@ -133,12 +148,15 @@ i will tell you later..😁
 [//]: # (```  )
 
 [//]: # ()
+
 [//]: # (**Enjoy the game! 🐍🔥**)
 
 [//]: # ()
+
 [//]: # (---)
 
 ## 🕹️ Game Mechanics
+
 - 🐍 The snake moves continuously in the last chosen direction.
 - 🍏 Eating a normal fruit (@) increases the score by **5 points**.
 - 💰 Eating a special fruit ($) increases the score by **20 points**.
@@ -148,7 +166,9 @@ i will tell you later..😁
 ---
 
 ## 💡 Code Structure
+
 The game is implemented using **Object-Oriented Programming (OOP) principles**:
+
 - 🛠️ `Game` (Base Class): Defines the core game logic and properties.
 - 🐍 `Snake` (Inherits from Game): Handles the snake’s movement.
 - 🍏 `Fruit` (Inherits from Snake): Manages fruit generation.
@@ -157,6 +177,7 @@ The game is implemented using **Object-Oriented Programming (OOP) principles**:
 ---
 
 ## 🚀 Future Enhancements
+
 - 🎮 Multiple levels with increasing complexity.
 - 👫 Multiplayer mode with two snakes.
 - 🏆 High score tracking system.
