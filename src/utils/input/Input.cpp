@@ -24,9 +24,7 @@ int _kbhit() {
         return 1;
     }
     return 0;
-}
-
-int _getch() {
+}int _getch() {
     struct termios oldt, newt;
     int ch;
     tcgetattr(STDIN_FILENO, &oldt);
@@ -38,10 +36,18 @@ int _getch() {
     if(ch == 27) {
         if(getchar() == '[') {
             switch(getchar()) {
-                case 'A': ch = 'w'; break;
-                case 'B': ch = 's'; break;
-                case 'C': ch = 'd'; break;
-                case 'D': ch = 'a'; break;
+                case 'A':
+                    ch = 'w';
+                    break;
+                case 'B':
+                    ch = 's';
+                    break;
+                case 'C':
+                    ch = 'd';
+                    break;
+                case 'D':
+                    ch = 'a';
+                    break;
             }
         }
     }

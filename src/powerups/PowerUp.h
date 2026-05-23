@@ -4,9 +4,7 @@
 #include <vector>
 
 enum PowerUpType {
-    POWER_SHIELD = 1,
-    POWER_SLOW = 2,
-    POWER_GHOST = 3
+    POWER_SHIELD = 1, POWER_SLOW = 2, POWER_GHOST = 3
 };
 
 struct PowerUp {
@@ -32,7 +30,6 @@ public:
 
 private:
     bool active = false;
-    
+
     PowerUp current{};
 };
-

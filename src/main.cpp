@@ -26,10 +26,10 @@ int main() {
         HighScore::save(highScoreFile, maxScore);
         EndChoice end = EndScreen::showGameOverAndAskPlayAgain(name, maxScore);
         playAgain = end.playAgain;
-        if (playAgain && end.changeSettings) {
+        if(playAgain && end.changeSettings) {
             settings = StartScreen::askSettings();
         }
-    } while (playAgain);
+    } while(playAgain);
 
     EndScreen::sayGoodbye(name);
 

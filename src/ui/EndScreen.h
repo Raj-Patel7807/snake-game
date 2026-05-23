@@ -9,7 +9,7 @@ struct EndChoice {
 
 class EndScreen {
 public:
-    static EndChoice showGameOverAndAskPlayAgain(const std::string& playerName, int maxScore);
-    static void sayGoodbye(const std::string& playerName);
-};
+    static EndChoice showGameOverAndAskPlayAgain(const std::string &playerName, int maxScore);
 
+    static void sayGoodbye(const std::string &playerName);
+};

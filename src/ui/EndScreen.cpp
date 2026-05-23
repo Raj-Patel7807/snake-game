@@ -16,8 +16,7 @@ static void printGameOverHeader(int maxScore) {
                              \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
         )" << Color::reset() << "\n\n\n";
 
-    std::cout << Color::brightRed() << "                                        G A M E  O V E R  ! ! !\n" <<
-            Color::reset();
+    std::cout << Color::brightRed() << "                                        G A M E  O V E R  ! ! !\n" << Color::reset();
     std::cout << "\n";
     std::cout << Color::brightYellow() << "Your Highest Score : " << Color::reset() << maxScore << "\n\n";
 }
@@ -34,7 +33,7 @@ EndChoice EndScreen::showGameOverAndAskPlayAgain(const std::string & /*playerNam
     std::cin >> play;
     out.playAgain = (play == 1 || play == 49);
 
-    if (!out.playAgain) {
+    if(!out.playAgain) {
         out.changeSettings = false;
         return out;
     }
@@ -50,7 +49,5 @@ EndChoice EndScreen::showGameOverAndAskPlayAgain(const std::string & /*playerNam
 
 void EndScreen::sayGoodbye(const std::string &playerName) {
     std::cout << Color::brightCyan() << "\n\n\n\n\nOkay, Byee...  " << Color::reset();
-    std::cout << "Thank You " << Color::brightYellow() << playerName << Color::reset() <<
-            " For Playing Our Game..!!\n\n\n\n";
+    std::cout << "Thank You " << Color::brightYellow() << playerName << Color::reset() << " For Playing Our Game..!!\n\n\n\n";
 }
-

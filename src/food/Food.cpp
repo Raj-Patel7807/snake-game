@@ -2,8 +2,8 @@
 #include <cstdlib>
 
 static bool contains(const std::vector<Point> &pts, const Point &p) {
-    for (const auto &x: pts) {
-        if (x == p) {
+    for(const auto &x: pts) {
+        if(x == p) {
             return true;
         }
     }
@@ -13,11 +13,11 @@ static bool contains(const std::vector<Point> &pts, const Point &p) {
 void Food::spawn(int width, int height, const std::vector<Point> &forbidden, long long elapsedMs) {
     int r = rand() % 100;
 
-    if (r < 70) {
+    if(r < 70) {
         type = FOOD_NORMAL;
-    } else if (r < 85) {
+    } else if(r < 85) {
         type = FOOD_SPECIAL;
-    } else if (r < 92) {
+    } else if(r < 92) {
         type = FOOD_POISON;
     } else {
         type = FOOD_BONUS_TIMED;
@@ -25,17 +25,17 @@ void Food::spawn(int width, int height, const std::vector<Point> &forbidden, lon
 
     spawnTimeMs = elapsedMs;
     ttlMs = 0;
-    if (type == FOOD_BONUS_TIMED) {
+    if(type == FOOD_BONUS_TIMED) {
         ttlMs = 7000; // 7 Seconds
     }
 
     Point p{};
 
-    for (int tries = 0; tries < 5000; tries++) {
+    for(int tries = 0; tries < 5000; tries++) {
         p.x = 1 + rand() % (width - 2);
         p.y = 1 + rand() % (height - 2);
 
-        if (!contains(forbidden, p)) {
+        if(!contains(forbidden, p)) {
             position = p;
             return;
         }
@@ -53,10 +53,10 @@ FoodType Food::getType() const {
 }
 
 bool Food::isExpired(long long elapsedMs) const {
-    if (type != FOOD_BONUS_TIMED) {
+    if(type != FOOD_BONUS_TIMED) {
         return false;
     }
-    if (ttlMs <= 0) {
+    if(ttlMs <= 0) {
         return false;
     }
     return (elapsedMs - spawnTimeMs) >= ttlMs;

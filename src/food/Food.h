@@ -17,7 +17,7 @@ private:
     int ttlMs = 0;
 
 public:
-    void spawn(int width, int height, const std::vector<Point>& forbidden, long long elapsedMs);
+    void spawn(int width, int height, const std::vector<Point> &forbidden, long long elapsedMs);
 
     Point getPosition() const;
 

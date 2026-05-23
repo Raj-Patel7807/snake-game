@@ -8,8 +8,7 @@ static void printWelcomeHeader() {
     std::cout << "\n\n\n";
     std::cout << "          **************************************************************************************\n\n";
     std::cout << "                                 W E L C O M E  T O  S N A K E  G A M E ! !\n\n";
-    std::cout <<
-            "          **************************************************************************************\n\n\n\n";
+    std::cout << "          **************************************************************************************\n\n\n\n";
     std::cout << Color::reset();
 }
 
@@ -34,7 +33,7 @@ GameSettings StartScreen::askSettings() {
     std::cout << "3. Survival (Speed keeps increasing)\n\n";
     std::cout << Color::brightYellow() << "Set Game Mode : " << Color::reset();
     std::cin >> modeChoice;
-    if (modeChoice < 1 || modeChoice > 3) modeChoice = 2;
+    if(modeChoice < 1 || modeChoice > 3) modeChoice = 2;
 
     system(CLEAR);
     printWelcomeHeader();
@@ -47,9 +46,9 @@ GameSettings StartScreen::askSettings() {
     std::cin >> diffChoice;
 
     int delayMs = 140;
-    if (diffChoice == 3) delayMs = 90;
-    else if (diffChoice == 2) delayMs = 140;
-    else if (diffChoice == 1) delayMs = 190;
+    if(diffChoice == 3) delayMs = 90;
+    else if(diffChoice == 2) delayMs = 140;
+    else if(diffChoice == 1) delayMs = 190;
 
     system(CLEAR);
     printWelcomeHeader();

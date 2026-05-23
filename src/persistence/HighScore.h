@@ -4,8 +4,7 @@
 
 class HighScore {
 public:
-    static int load(const std::string& filePath);
+    static int load(const std::string &filePath);
 
-    static void save(const std::string& filePath, int score);
+    static void save(const std::string &filePath, int score);
 };
-

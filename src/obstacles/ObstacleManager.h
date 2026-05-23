@@ -11,19 +11,16 @@ public:
 
     bool isEnabled() const;
 
-    bool tick(int score, long long elapsedMs, int boardWidth, int boardHeight,
-              const std::vector<Point> &snakeCells, const Point &foodPos);
+    bool tick(int score, long long elapsedMs, int boardWidth, int boardHeight, const std::vector<Point> &snakeCells, const Point &foodPos);
 
     const std::vector<Point> &obstacles() const;
 
     bool contains(const Point &p) const;
 
 private:
-    void regenerate(int score, long long elapsedMs, int boardWidth, int boardHeight,
-                    const std::vector<Point> &snakeCells, const Point &foodPos);
+    void regenerate(int score, long long elapsedMs, int boardWidth, int boardHeight, const std::vector<Point> &snakeCells, const Point &foodPos);
 
-    void moveSomeObstacles(long long elapsedMs, int boardWidth, int boardHeight,
-                           const std::vector<Point> &snakeCells, const Point &foodPos);
+    void moveSomeObstacles(long long elapsedMs, int boardWidth, int boardHeight, const std::vector<Point> &snakeCells, const Point &foodPos);
 
     bool enabled = false;
     long long lastRegenMs = 0;

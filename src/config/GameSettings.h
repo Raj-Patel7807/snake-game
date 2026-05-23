@@ -1,9 +1,7 @@
 #pragma once
 
 enum GameMode {
-    MODE_CLASSIC = 1,
-    MODE_OBSTACLES = 2,
-    MODE_SURVIVAL = 3
+    MODE_CLASSIC = 1, MODE_OBSTACLES = 2, MODE_SURVIVAL = 3
 };
 
 struct GameSettings {
@@ -11,4 +9,3 @@ struct GameSettings {
     bool wallsEnabled;
     GameMode mode;
 };
-
